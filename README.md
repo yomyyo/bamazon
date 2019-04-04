@@ -4,4 +4,4 @@ This project is an amazon app that simulates a user buying an product and keepin
 
 Start by selecting if you want to buy or not
 
-![To Buy or not to buy](/images/screenshot5.png)
+![To Buy or not to buy](images/screenshot5.png)
