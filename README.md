@@ -1,19 +1,50 @@
-# bamazon
+# Bamazon CLI Store
 
-This project is an amazon app that simulates a user buying an product and keeping track of inventory using MySQL server
+A command-line storefront built with Node.js and MySQL. The application lists
+products, accepts purchase requests, prevents orders that exceed inventory, and
+updates stock quantities after successful purchases.
 
-Start by selecting if you want to buy or not
+## Features
 
-![To Buy or not to buy](images/screenshot5.png?raw=true)
+- Display the product catalog in the terminal
+- Select products by database ID
+- Validate requested quantity against inventory
+- Calculate the purchase total
+- Persist inventory changes in MySQL
 
-Then choose which item you want by ID and how much you want to buy
+## Technology
 
-![BUY IT](images/screenshot6.png)
+- Node.js
+- MySQL
+- Inquirer
 
-If you buy more than inventory has, it won't let you buy it
+## Setup
 
-![You-can't-buy-this](images/screenshot7.png)
+```bash
+npm install
+mysql -u root -p < bamazon.sql
+```
 
-If you don't want to shop anymore, then exit
+Update the local MySQL credentials in `bamazonCustomer.js`.
 
-![bye bye](images/screenshot8.png)
+## Run
+
+```bash
+node bamazonCustomer.js
+```
+
+The application prints the catalog, asks whether you want to buy or exit, then
+prompts for a product ID and quantity.
+
+## Screenshots
+
+![Buy or exit prompt](images/screenshot5.png)
+![Purchase prompts](images/screenshot6.png)
+![Insufficient quantity message](images/screenshot7.png)
+![Exit flow](images/screenshot8.png)
+
+## Project Status
+
+This is a legacy command-line coursework project. Database configuration is
+stored directly in the script and should be moved to environment variables
+before broader use.
